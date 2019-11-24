@@ -5,7 +5,9 @@ import java.util.Arrays;
 public class Demo1 {
 
 	public static void main(String[] args) {
+
 		// System.out.println(args.length);
+
 		// create array of int
 		int[] arr = new int[5];
 		// populate with elements
