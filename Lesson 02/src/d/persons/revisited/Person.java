@@ -18,7 +18,8 @@ public class Person {
 		this.id = id;
 	}
 
-	public int getId() {
+	// final method cannot be overridden
+	public final int getId() {
 		return id;
 	}
 
@@ -40,6 +41,27 @@ public class Person {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", age=" + age + "]";
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Person)) {
+			return false;
+		} else {
+//			Person other = (Person) obj;
+//			return this.id == other.id;
+			return this.id == ((Person) obj).id;
+		}
+	}
+
+	@Override
+	public int hashCode() {
+		return id;
 	}
 
 }
