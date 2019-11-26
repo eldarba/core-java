@@ -7,17 +7,20 @@ public class Test {
 		Person p2 = new Person();
 		Person p3 = new Person();
 
-		p1.name = "David";
-		p2.name = "Lea";
-		p1.age = 40;
-		p2.age = 30;
+//		p1.name = "David";
+		p1.setName("David");
+		p2.setName("Lea");
+//		p1.age = 40;
+//		p2.age = 30;
+		p1.setAge(40);
+		p2.setAge(30);
 
-		System.out.println(p1.name);
-		System.out.println(p1.age);
-		System.out.println(p2.name);
-		System.out.println(p2.age);
-		System.out.println(p3.name);
-		System.out.println(p3.age);
+		System.out.println(p1.getName());
+		System.out.println(p1.getAge());
+		System.out.println(p2.getName());
+		System.out.println(p2.getAge());
+		System.out.println(p3.getName());
+		System.out.println(p3.getAge());
 
 		System.out.println("===========");
 		p1.printName();
