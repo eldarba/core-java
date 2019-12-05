@@ -1,12 +1,10 @@
 package b.sorting;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.io.Serializable;
 
-public class Car implements Comparable<Car> {
+public class Car implements Comparable<Car>, Serializable {
 
-	private int number; // natural order
+	private transient int number; // natural order
 	private String make;
 	private int speed;
 
