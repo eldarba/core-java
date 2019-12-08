@@ -11,9 +11,13 @@ public class Demo1 {
 		MyThread t1 = new MyThread("t1"); // create a thread object
 		MyThread t2 = new MyThread("t2"); // create a thread object
 
+		MyRunnable r1 = new MyRunnable();
+		Thread t3 = new Thread(r1, "t3");
+
 		t1.start(); // start the thread - will create a new stack for this thread and than invoke
 					// the run method
 		t2.start();
+		t3.start();
 
 		Thread mainThread = Thread.currentThread();
 
